@@ -5,6 +5,8 @@ import org.apache.hadoop.io.WritableComparator;
  * Created by Rajiv on 3/22/17.
  *
  * Grouping based on Date of Birth only
+ *
+ * Only needed if you are performing some aggregations on that particular key
  */
 public class MyGroupComparator extends WritableComparator {
 

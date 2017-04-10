@@ -36,9 +36,10 @@ public class Driver {
         // Setting Classes necessary for Performing Secondary Sort
         job.setPartitionerClass(MyPartitioner.class);
         job.setSortComparatorClass(MyKeyComparator.class);
-        job.setGroupingComparatorClass(MyGroupComparator.class);
+        // Below is only needed if you performing an aggregation on the keys
+        // job.setGroupingComparatorClass(MyGroupComparator.class);
 
-        job.setReducerClass(SecondarySortRedcuer.class);
+        job.setReducerClass(SecondarySortReducer.class);
 
         // Specify key / value
         job.setOutputKeyClass(CustomWritable.class);

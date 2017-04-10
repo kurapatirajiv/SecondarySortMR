@@ -1,3 +1,4 @@
+import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.NullWritable;
 import org.apache.hadoop.io.Text;
@@ -11,6 +12,9 @@ import java.io.IOException;
  * To read the input file and write the DOB,Name pair as key and NullWritable as value
  */
 public class SecondarySortMapper extends Mapper<LongWritable,Text,CustomWritable,NullWritable> {
+
+
+
 
     public void map(LongWritable key, Text values , Context context) throws IOException,InterruptedException{
 
